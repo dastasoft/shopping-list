@@ -8,9 +8,6 @@ const name = document.querySelector("input[name ='name']") as HTMLInputElement;
 const quantity = document.querySelector(
   "input[name ='quantity']"
 ) as HTMLInputElement;
-const shoppingItems = document.querySelector(
-  ".shopping-items"
-) as HTMLUListElement;
 const render = new Render();
 
 render.renderSections(section, Sections);
@@ -19,5 +16,5 @@ form.addEventListener("submit", (e: Event) => {
 
   const product = new Product(name.value, quantity.value, section.value);
 
-  product.render(shoppingItems);
+  product.render();
 });

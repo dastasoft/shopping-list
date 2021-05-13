@@ -1,0 +1,293 @@
+:root {
+  --primary: #28b9b5;
+  --secondary: #fa980f;
+  --bg: #ffffff;
+  --text-color: #000000;
+  --interactions-bg: #e5e5e5;
+  --button-text: #ffffff;
+  --fruits-vegetables: #8fe302;
+  --meat-seafood: #f24844;
+  --dairy: #fa980f;
+  --forzen-foods: #7479f2;
+  --bread-pasta: #f2d250;
+  --snacks: #e3028a;
+  --breverages: #0334fd;
+  --cleaning: #f27b44;
+  --others: #cacaca;
+  --footer: #017a5a;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  background-color: var(--bg);
+}
+
+header {
+  height: 70px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+header h1 {
+  margin-left: 0.5em;
+}
+
+main {
+  flex: 1;
+}
+
+.interactions {
+  background-color: var(--interactions-bg);
+  padding: 1em;
+  margin: 1em 0 2em 0;
+  width: 100%;
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 0.5fr;
+  grid-gap: 1em;
+  grid-template-areas:
+    "section quantity"
+    "name name"
+    "submit submit";
+}
+
+form > * > label {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+input,
+select {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 0.5em;
+  background-color: var(--bg);
+}
+
+.interactions__section {
+  grid-area: section;
+}
+
+.interactions__quantity {
+  grid-area: quantity;
+}
+
+.interactions__name {
+  grid-area: name;
+}
+
+.interactions__button {
+  grid-area: submit;
+  margin: 0 auto;
+  padding: 1em 2em;
+  background-color: var(--primary);
+  border-radius: 8px;
+  color: var(--button-text);
+  font-weight: bold;
+}
+
+.interactions__button:hover {
+  background-color: var(--secondary);
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  margin: 1em;
+}
+
+.section {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+}
+
+.section h3 {
+  border-radius: 8px 8px 0px 0px;
+  color: #ffffff;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.section ul {
+  flex: 1;
+  padding: 0.5em;
+}
+
+.section ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.section__item-holder {
+  display: flex;
+  align-items: center;
+}
+
+.section__delete-button {
+  display: inline-flex;
+  margin-right: 0.5em;
+}
+
+.fruits-vegetables .section__delete-icon {
+  fill: var(--fruits-vegetables);
+}
+
+.fruits-vegetables {
+  border: 1px solid var(--fruits-vegetables);
+}
+
+.fruits-vegetables h3 {
+  background-color: var(--fruits-vegetables);
+}
+
+.meat-seafood .section__delete-icon {
+  fill: var(--meat-seafood);
+}
+
+.meat-seafood {
+  border: 1px solid var(--meat-seafood);
+}
+
+.meat-seafood h3 {
+  background-color: var(--meat-seafood);
+}
+
+.dairy .section__delete-icon {
+  fill: var(--dairy);
+}
+
+.dairy {
+  border: 1px solid var(--dairy);
+}
+
+.dairy h3 {
+  background-color: var(--dairy);
+}
+
+.forzen-foods .section__delete-icon {
+  fill: var(--forzen-foods);
+}
+
+.forzen-foods {
+  border: 1px solid var(--forzen-foods);
+}
+
+.forzen-foods h3 {
+  background-color: var(--forzen-foods);
+}
+
+.bread-pasta .section__delete-icon {
+  fill: var(--bread-pasta);
+}
+
+.bread-pasta {
+  border: 1px solid var(--bread-pasta);
+}
+
+.bread-pasta h3 {
+  background-color: var(--bread-pasta);
+}
+
+.snacks .section__delete-icon {
+  fill: var(--snacks);
+}
+
+.snacks {
+  border: 1px solid var(--snacks);
+}
+
+.snacks h3 {
+  background-color: var(--snacks);
+}
+
+.breverages .section__delete-icon {
+  fill: var(--breverages);
+}
+
+.breverages {
+  border: 1px solid var(--breverages);
+}
+
+.breverages h3 {
+  background-color: var(--breverages);
+}
+
+.cleaning .section__delete-icon {
+  fill: var(--cleaning);
+}
+
+.cleaning {
+  border: 1px solid var(--cleaning);
+}
+
+.cleaning h3 {
+  background-color: var(--cleaning);
+}
+
+.others .section__delete-icon {
+  fill: var(--others);
+}
+
+.others {
+  border: 1px solid var(--others);
+}
+
+.others h3 {
+  background-color: var(--others);
+}
+
+footer {
+  background-color: var(--footer);
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  align-items: center;
+  padding: 0.5em 0;
+  font-size: 12px;
+  color: var(--secondary);
+}
+
+footer * > a {
+  margin: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sections {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .sections {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
